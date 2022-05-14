@@ -1,0 +1,10 @@
+--- gnome-bluetooth-3.34.5/sendto/meson.build.orig	2021-03-23 16:09:30.431372200 +0100
++++ gnome-bluetooth-3.34.5/sendto/meson.build	2022-05-14 13:40:59.618645814 +0200
+@@ -22,7 +22,6 @@ desktop_in = configure_file(
+ )
+ 
+ i18n.merge_file (
+-  desktop,
+   type: 'desktop',
+   input: desktop_in,
+   output: desktop,
