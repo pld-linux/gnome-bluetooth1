@@ -89,7 +89,7 @@ Dokumentacja API biblioteki GNOME Bluetooth 1.0.
 
 %prep
 %setup -q -n gnome-bluetooth-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %meson build \
