@@ -92,16 +92,16 @@ Dokumentacja API biblioteki GNOME Bluetooth 1.0.
 %patch -P0 -p1
 
 %build
-%meson build \
+%meson \
 	%{?with_apidocs:-Dgtk_doc=true} \
 	-Dicon_update=false
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 # keep just library and used data
 %{__rm} $RPM_BUILD_ROOT%{_bindir}/bluetooth-sendto \
